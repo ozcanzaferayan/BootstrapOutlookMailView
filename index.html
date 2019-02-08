@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <!-- <meta name="viewport" content="width=device-   width, initial-scale=1.0"> -->
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title></title>
+    <!-- Bootstrap CSS CDN -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+    <link rel="stylesheet" href="./css/fabric-icons.css">
+    <!-- Our Custom CSS -->
+    <link rel="stylesheet" href="style4.css">
+    <link rel="stylesheet" href="./css/mail_content.css">
+    <script defer src="https://use.fontawesome.com/releases/v5.7.0/js/all.js" integrity="sha384-qD/MNBVMm3hVYCbRTSOW130+CWeRIKbpot9/gR1BHkd7sIct4QKhT1hOPd+2hO8K"
+        crossorigin="anonymous"></script>
+</head>
+
+<body>
+    <div class="wrapper">
+        <!-- Sidebar  -->
+        <nav id="sidebar" class="active">
+            <ul class="list-unstyled components">
+                <li>
+                    <a href="#" id="sidebarCollapse">
+                        <i class="ms-Icon ms-Icon--GlobalNavButton"></i>
+                    </a>
+                </li>
+                <li>
+                    <a href="#">
+                        <i class="ms-Icon ms-Icon--Add"></i> <span class="navMenuText">New mail<span>
+                    </a>
+                </li>
+                <li>
+                    <a href="#">
+                        <i class="ms-Icon ms-Icon--Contact"></i> <span class="navMenuText">Accounts<span>
+                    </a>
+                </li>
+                <li>
+                    <a href="#">
+                        <i class="ms-Icon ms-Icon--FolderHorizontal"></i> <span class="navMenuText">Folders<span>
+                    </a>
+                </li>
+            </ul>
+            <ul class="list-unstyled components bottom">
+                <li>
+                    <a href="#">
+                        <i class="ms-Icon ms-Icon--Mail"></i>
+                    </a>
+                    <a href="#">
+                        <i class="ms-Icon ms-Icon--Calendar"></i>
+                    </a>
+                    <a href="#">
+                        <i class="ms-Icon ms-Icon--People"></i>
+                    </a>
+                    <a href="#">
+                        <i class="ms-Icon ms-Icon--ToDoLogoOutline"></i>
+                    </a>
+                </li>
+            </ul>
+        </nav>
+        <div id="container">
+            <!-- Page Content  -->
+            <div id="list" class="ui-widget-content">
+                <div class="top_menu container">
+                    <form>
+                        <div class="form-row">
+                            <div class="col-7">
+                                <input id="search" type="text" class="form-control ms" placeholder="Search" />
+                                <i class="ms-Icon ms-Icon--Search"></i>
+                            </div>
+                            <div class="col-5 text-right">
+                                <button type="button" class="btn ms">
+                                    <i class="ms-Icon ms-Icon--Sync"></i>
+                                </button>
+                                <button type="button" class="btn ms">
+                                    <i class="ms-Icon ms-Icon--MultiSelect"></i>
+                                </button>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+                <div class="mail_header container">
+                    <span class="header_text">Inbox</span>
+                    <div class="btn-group float-right">
+                        <button type="button" class="btn ms btn-default dropdown-toggle" data-toggle="dropdown"
+                            aria-haspopup="true" aria-expanded="false">
+                            All
+                        </button>
+                        <div class="dropdown-menu">
+                            <a class="dropdown-item" href="#">All</a>
+                            <a class="dropdown-item" href="#">Unread</a>
+                            <a class="dropdown-item" href="#">Flagged</a>
+                            <div class="dropdown-divider"></div>
+                            <a class="dropdown-item" href="#">Sort By Date</a>
+                            <a class="dropdown-item" href="#">Sort By Name</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="mail_list">
+                    <ul class="mail_items">
+                        <li class="header container">Yesterday</li>
+                    </ul>
+                </div>
+            </div>
+            <div id="content">
+                <div class="mail_content">
+                    <div class="top_menu container-fluid">
+                        <form>
+                            <div class="form-row">
+                                <div class="col-12 text-right">
+                                    <button type="button" class="btn ms">
+                                        <i class="ms-Icon ms-Icon--Reply"></i> Reply
+                                    </button>
+                                    <button type="button" class="btn ms">
+                                        <i class="ms-Icon ms-Icon--ReplyAll"></i> Reply All
+                                    </button>
+                                    <button type="button" class="btn ms">
+                                        <i class="ms-Icon ms-Icon--Forward"></i> Forward
+                                    </button>
+                                    <button type="button" class="btn ms">
+                                        <i class="ms-Icon ms-Icon--Archive"></i> Archive
+                                    </button>
+                                    <button type="button" class="btn ms">
+                                        <i class="ms-Icon ms-Icon--Delete"></i> Delete
+                                    </button>
+                                    <button type="button" class="btn ms">
+                                        <i class="ms-Icon ms-Icon--Flag"></i> Set flag
+                                    </button>
+                                    <button type="button" class="btn ms">
+                                        <i class="ms-Icon ms-Icon--More"></i>
+                                    </button>
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                    <div class="mail_header container-fluid">
+                        <span id="mail_subject" class="header_text"></span>
+                    </div>
+                    <div class="mail_description container-fluid">
+                        <div id="mail_sender_image" class="sender_image">
+                            <span id="mail_sender_image_span">as</span>
+                        </div>
+                        <div class="sending_description">
+                            <span id="mail_sender_name" class="sender_name"></span>
+                            <span id="mail_send_date" class="send_date"></span>
+                        </div>
+                        <button type="button" class="btn ms float-right OpenInNewWindow">
+                            <i class="ms-Icon ms-Icon--OpenInNewWindow"></i>
+                        </button>
+                        <div class="to_info">
+                            <span class="to_text">To:</span>
+                            <span id="to_name" class="to_name"></span>
+                        </div>
+                    </div>
+                    <div id="mail_attachments" class="mail_attachments container-fluid">
+                        <!-- <ul>
+                            <li>
+                                <a href="#">
+                                    <img class="attachment_image" src="./img/file_images/xls.svg"/>
+                                    <div class="attachment_info">
+                                        <span>manual.pdf</span>
+                                        <span>1.24 MB</span>
+                                    </div>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#">
+                                    <img class="attachment_image" src="./img/file_images/pdf.svg"/>
+                                    <div class="attachment_info">
+                                        <span>manual.pdf</span>
+                                        <span>1.24 MB</span>
+                                    </div>
+                                </a>
+                            </li>
+                        </ul> -->
+                    </div>
+                    <div id="mail_body" class="mail_body container-fluid">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.0/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/js/bootstrap.min.js"></script>
+    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+    <script src="./js/sampleMailData.js"></script>
+    <script src="./js/main.js"></script>
+</body>
+
+</html>

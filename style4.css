@@ -1,0 +1,469 @@
+/*
+    DEMO STYLE
+*/
+
+@import "https://fonts.googleapis.com/css?family=Open+Sans";
+body {
+    font-family: 'Open Sans', sans-serif;
+    background: #fafafa;
+    background-image: url('./img/background.jpg');
+    background-repeat: no-repeat;
+    overflow: hidden;
+}
+
+dl, ol, ul {
+    margin-top: 0;
+    margin-bottom: 0;
+}
+
+p {
+    font-family: 'Poppins', sans-serif;
+    font-size: 1.1em;
+    font-weight: 300;
+    line-height: 1.7em;
+}
+
+a,
+a:hover,
+a:focus {
+    color: inherit;
+    text-decoration: none;
+    transition: all 0.3s;
+}
+
+.navbar {
+    padding: 15px 10px;
+    background: #fff;
+    border: none;
+    border-radius: 0;
+    margin-bottom: 40px;
+    box-shadow: 1px 1px 3px rgba(0, 0, 0, 0.1);
+}
+
+.navbar-btn {
+    box-shadow: none;
+    outline: none !important;
+    border: none;
+}
+
+.line {
+    width: 100%;
+    height: 1px;
+    border-bottom: 1px dashed #ddd;
+    margin: 40px 0;
+}
+
+i,
+span {
+    display: inline-block;
+}
+
+/* ---------------------------------------------------
+    SIDEBAR STYLE
+----------------------------------------------------- */
+
+.wrapper {
+    display: flex;
+    align-items: stretch;
+}
+
+#sidebar {
+    min-width: 200px;
+    max-width: 250px;
+    background-image: url('./img/background_tinted_multiply.jpg');
+    background-repeat: no-repeat;
+    color: #fff;
+    transition: all 0.3s;
+    opacity: 1;
+}
+
+#sidebar.active {
+    min-width: 48px;
+    max-width: 80px;
+    text-align: center;
+}
+
+#sidebar.active .sidebar-header h3,
+#sidebar.active .CTAs {
+    display: none;
+}
+
+#sidebar.active .sidebar-header strong {
+    display: block;
+}
+
+#sidebar ul li a {
+    text-align: left;
+}
+
+#sidebar.active ul li a {
+    text-align: center;
+    font-size: 0.85em;
+}
+
+#sidebar.active ul li a i {
+    margin-right: 0;
+    display: block;
+    font-size: 18px;
+    margin-bottom: 5px;
+}
+
+#sidebar.active ul ul a {
+    padding: 10px !important;
+}
+
+#sidebar.active .dropdown-toggle::after {
+    top: auto;
+    bottom: 10px;
+    right: 50%;
+    -webkit-transform: translateX(50%);
+    -ms-transform: translateX(50%);
+    transform: translateX(50%);
+}
+
+#sidebar .sidebar-header {
+    padding: 20px;
+    background: #6d7fcc;
+}
+
+#sidebar .sidebar-header strong {
+    display: none;
+    font-size: 1.8em;
+}
+/*
+#sidebar ul.components {
+    padding: 20px 0;
+    border-bottom: 1px solid #47748b;
+}
+*/
+#sidebar ul li a {
+    padding: 10px;
+    font-size: 1.1em;
+    display: block;
+    border: 1px solid transparent;
+}
+
+#sidebar ul li a:hover {
+    background-color: #3C85C5;
+    border: 1px solid #5B99CE;
+}
+
+#sidebar ul li a i {
+    margin-right: 10px;
+}
+
+#sidebar ul li.active>a,
+a[aria-expanded="true"] {
+    color: #fff;
+    background: #6d7fcc;
+}
+
+a[data-toggle="collapse"] {
+    position: relative;
+}
+
+.dropdown-toggle::after {
+    display: inline-block;
+    top: 50%;
+    right: 20px;
+    transform: translateY(-50%);
+}
+
+ul ul a {
+    font-size: 0.9em !important;
+    padding-left: 30px !important;
+    background: #6d7fcc;
+}
+
+ul.CTAs {
+    padding: 20px;
+}
+
+ul.CTAs a {
+    text-align: center;
+    font-size: 0.9em !important;
+    display: block;
+    border-radius: 5px;
+    margin-bottom: 5px;
+}
+
+a.download {
+    background: #fff;
+    color: #1875C0;
+}
+
+a.article,
+a.article:hover {
+    background: #6d7fcc !important;
+    color: #fff !important;
+}
+
+
+/* ---------------------------------------------------
+    MEDIAQUERIES
+----------------------------------------------------- */
+
+@media (max-width: 768px) {
+    #sidebar {
+        min-width: 80px;
+        max-width: 80px;
+        text-align: center;
+        margin-left: -80px !important;
+    }
+    .dropdown-toggle::after {
+        top: auto;
+        bottom: 10px;
+        right: 50%;
+        -webkit-transform: translateX(50%);
+        -ms-transform: translateX(50%);
+        transform: translateX(50%);
+    }
+    #sidebar.active {
+        margin-left: 0 !important;
+    }
+    #sidebar .sidebar-header h3,
+    #sidebar .CTAs {
+        display: none;
+    }
+    #sidebar .sidebar-header strong {
+        display: block;
+    }
+    #sidebar ul li a {
+        padding: 20px 10px;
+    }
+    #sidebar ul li a span {
+        font-size: 0.85em;
+    }
+    #sidebar ul li a i {
+        margin-right: 0;
+        display: block;
+    }
+    #sidebar ul ul a {
+        padding: 10px !important;
+    }
+    #sidebar ul li a i {
+        font-size: 1.3em;
+    }
+    #sidebar {
+        margin-left: 0;
+    }
+    #sidebarCollapse span {
+        display: none;
+    }
+}
+
+.navMenuText {
+    display: none;
+    margin-left: 10px;  
+}
+
+
+nav#sidebar .bottom {
+    position: absolute;
+    bottom: 0;
+    min-width: 50px;
+}
+nav#sidebar .bottom li a {
+    display: inline-block;
+    width: 45px;
+    text-align: center;
+}
+
+nav#sidebar.active .bottom li a {
+    display: block;
+}
+
+
+/* ---------------------------------------------------
+    CONTENT STYLE
+----------------------------------------------------- */
+
+
+.ui-widget-content {
+    border: 0;
+}
+
+
+#list {
+    width: 100px;
+    min-height: 100vh;
+    min-width: 300px;
+    max-width: 1000px;
+    background: #fff;
+    border-right: 1px solid #E6E6E6;
+}
+
+#content {
+    width: 100%;
+    min-height: 100vh;
+    position:relative;
+}
+
+#container {
+    width: 100%;
+    display: inherit;
+    overflow: hidden;
+}
+
+.top_menu {
+    padding-top: 5px;
+}
+
+.btn.ms {
+    background: transparent;
+    color: #000;
+    border: none;
+}
+
+.ms-Icon--Search {
+    right: 20px;
+    top: 6px;
+    position: absolute;
+}
+
+input.ms, button.ms{
+    border-radius: 0;
+} 
+.btn.ms.focus, .btn.ms:hover {
+    outline: 0;
+    box-shadow: inherit;
+    background: #F3F3F3;
+}
+
+.btn.ms.focus, .btn.ms:focus {
+    outline: 0;
+    box-shadow: inherit;
+    background: #E6E6E6;
+}
+
+
+.mail_header {
+    margin-top: 15px;
+}
+
+.mail_header .header_text {
+    font-weight: bold;
+    font-size: 17px;
+}
+
+.dropdown-toggle {
+    font-size: 13px;
+}
+
+ul.mail_items {
+    list-style: none;
+    padding: 0;
+    border-top: 1px solid #E6E6E6;
+    margin-top: 10px;
+    height: 100vh;
+    overflow: auto;
+}
+
+ul.mail_items li{
+    border-bottom: 1px solid #E6E6E6;
+}
+
+ul.mail_items li div.sender_image,  
+ul.mail_items li div.mail_info,
+ul.mail_items li div.mail_actions {
+    display: inline-block;
+}
+
+
+ul.mail_items .header {
+    background-color: #F9F9F9;
+    padding-top: 9px;
+    padding-bottom: 9px;
+}
+
+ul.mail_items .item {
+    padding-top: 15px;
+    padding-bottom: 15px;
+    height: 83px;
+    padding-right: 0;
+}
+
+.sender_image {
+    width: 32px;
+    height: 32px;
+    text-align: center;
+    border-radius: 100%;
+    background-color: #AF5791;
+    display: inline-block;
+    vertical-align: top;
+}
+
+.sender_image span{
+    margin-top: 7px;
+    font-size: 13px;
+    color: #fff;
+}
+
+ul.mail_items .mail_info {
+    display: inline-block;
+/*    position: absolute;*/
+    padding-left: 10px;
+    white-space: nowrap;
+    line-height: 19px;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    overflow: hidden;
+    width: calc(100% - 120px);
+    user-select: none;
+    -moz-user-select: none;
+
+}
+
+.mail_info .mail_sender {
+    font-size: 14px;
+}
+
+.mail_info .mail_subject {
+    font-size: 15px;
+}
+
+.mail_info .mail_summary {
+    
+    font-size: 15px;
+    color: #777;
+}
+
+.mail_actions {
+    width: 80px;
+    height: 65px;
+    line-height: 10px;
+    padding-left: 10px;
+    text-align: right;
+    padding-right: 10px;
+    float: right;
+}
+.mail_actions .action_buttons {
+    font-size: 16px;
+}
+
+.mail_sent_date span {
+    font-size: 12px;
+    margin-top: 15px;
+}
+
+.ms-Icon--Important{
+    color: red;
+}
+
+.mail_items .item:hover {
+    background-color: #F3F3F3;
+    cursor: default;
+}
+
+.mail_items .item.selected {
+    background-color: #DDEDF9;
+}
+
+ul.mail_items::-webkit-scrollbar {
+    width: 3px;
+    background-color: #FFFFFF;
+} 
+
+ul.mail_items::-webkit-scrollbar-thumb {
+    background-color: #C5C5C5;
+}
